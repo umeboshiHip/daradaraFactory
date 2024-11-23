@@ -1,6 +1,5 @@
 .ue {
     padding: 5%;
-    min-width: 663px;
 }
 
 body {
@@ -9,11 +8,18 @@ body {
 
 .main_text > .major_heading, .self_introduce > .major_heading, .contact_address > .major_heading, .accomplishment > .major_heading {
     font-family:'游ゴシック';
-    font-size: 400%;
+    font-size: 300%;
     padding: 0.25em 0.5em;/*上下 左右の余白*/
     color: #494949;/*文字色*/
     background: transparent;/*背景透明に*/
     border-left: solid 5px #000000;/*左線*/
+    white-space: normal;
+    word-wrap: break-word;
+
+}
+
+.top_bar {
+    padding-bottom: 2em;
 }
 
 .self_introduce, .accomplishment, .contact_address {
@@ -78,7 +84,7 @@ body {
     display: inline-block;
 }
 
-.link_to_home a i{
+.link_to_home a i, .blog_logo a i{
     padding-right: 5px;
 }
 
@@ -98,13 +104,13 @@ body {
     color: black;
 }
 
-.link_to_home a {
+.link_to_home a, .blog_logo a {
     font-family: "Darumadrop One", sans-serif;
     font-weight: 400;
     font-style: normal;
     text-decoration: none;
     color: black;
-    font-size: 200%;
+    font-size: 225%;
 }
 
 .link_to_home a p {
@@ -118,87 +124,144 @@ body {
     font-weight: 500;
 }
 
-.bottom_bar {
-    padding: 2em;
-    background-color: rgb(221, 221, 221);
-    color: white
+@media (max-width: 755px) {
+    .url_to_page {
+        display: none;
+    }
 }
 
-/*文字rgb(110, 110, 110)*/
-/*見出しrgb(130, 130, 130)*/
+.bottom_bar {
+    background-color: #d3d3d3;
+    padding: 5%;
+}
 
-.bar {
-    display: inline-block;
+.bottom_bar a {
+    text-decoration: none;
+    color: #6d6d6d;
+}
+
+.bottom_bar a:hover, .another_link a:hover, .link_to_home a:hover, .blog_logo a:hover {
+    color: #000000;
+}
+
+.listtati {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .blog_logo {
-    font-family: "Darumadrop One", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    text-decoration: none;
-    color: rgb(50, 50, 50);
-    font-size: 150%;
-    margin-bottom: 2em;
-    margin-top: 5px;
-    padding-right: 3em;
-}
-
-.blog_logo i{
-    padding-right: 5px;
+    padding-bottom: 1em;
 }
 
 .bar_title {
     font-family: "Shippori Antique", serif;
-    font-weight: bold;
+    font-weight: 400;
     font-style: normal;
-    font-size: 125%;
-    margin-bottom: 1em;
-    padding-left: 10px;
-    padding-right: 7em;
-    border-left: 3px solid #494949;
-    display: inline-block;
-    color: rgb(50, 50, 50);
+
+    padding-left: 8px;
+    border-left: 4px solid #6d6d6d;
 }
 
-.bar_2, .bar_3, .bar_4 {
-    float: left;
-}
-
-.bottom_bar .copy_right {
-    font-family: "Zen Maru Gothic", serif;
-    font-style: normal;
-    color: #494949;
-    text-align: center;
-    padding-top: 2em;
-}
-
-.bottom_bar a {
-    color: rgb(110, 110, 110);
-    text-decoration: none;
-}
-
-.bottom_bar li a {
-    font-family: "Zen Maru Gothic", serif;
-    font-style: normal;
-    margin: 0px;
-    padding-right: 1em;
-}
-
-.bottom_bar li {
-    color: rgb(110, 110, 110);
-}
-
-.bottom_bar ul {
-    list-style-type: none;
-    margin: 0px;
+.list {
     padding: 0px;
+    list-style-type: none;
+    font-family: "Zen Maru Gothic", serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
-.bottom_bar li:before {
+.copyright {
+    font-family: "Zen Maru Gothic", serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+}
+
+.list li:before {
     content: ">";
-    padding-right: 3px;
 }
 
-.bottom_bar_contents {
-    padding: 1.5em;
+.list li {
+    color: #747474;
+}
+
+@media (max-width: 1240px) {
+    .listtati {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 647px) {
+    .listtati {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+}
+
+.article {
+    padding: 1em;
+
+}
+
+.article a {
+    text-decoration: none;
+    color: #494949;
+}
+
+.article a:hover {
+    color: #000000;
+}
+
+.article_title {
+    font-family: "Zen Maru Gothic", serif;
+    font-weight: 700;
+    font-size: 25;
+    font-style: normal;
+}
+
+.article_description, .article_date, .main_contents, .main_contents p {
+    color: #494949;
+    font-family: "Zen Maru Gothic", serif;
+    font-weight: 400;
+    font-style: normal;
+    padding-left: 1em;
+}
+
+.article_date {
+    padding-bottom: 1em;
+}
+
+.article_date i {
+    padding-right: 5px;
+}
+
+.article_description {
+    padding-bottom: 5em;
+}
+
+.numList {
+    counter-reset: number;
+    padding-top: 1em;
+    padding-left: 1em;
+    padding-bottom: 1em;
+/*    border: solid 1px #494949;
+    border-radius: 3px;*/
+    list-style-type: none;
+}
+
+.numList li {
+    padding: 10px;
+    font-weight: bold;
+}
+
+.numList li:before {
+    counter-increment: number;
+    content: counter(number);
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-right: 1em;
+    font-weight: bold;
+    color: white;
+    background-color: #494949;
+    border-radius: 3px;
 }

@@ -11,10 +11,9 @@
         <link href="https://fonts.googleapis.com/css2?family=Shippori+Antique&family=Zen+Maru+Gothic&display=swap" rel="stylesheet">
         <link href="https://use.fontawesome.com/releases/v6.6.0/css/all.css" rel="stylesheet">
         <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Darumadrop+One&family=Shippori+Antique&family=Slackside+One&family=Zen+Maru+Gothic&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Darumadrop+One&family=Shippori+Antique&family=Slackside+One&family=Zen+Maru+Gothic&display=swap" rel="stylesheet">
         <script src="form.js"></script>
-        <script src="windowsize.js"></script>
     </head>
     <body>
         <div class="ue">
@@ -27,9 +26,9 @@
                     </a>
                 </span>
                 <span class="another_link">
-                    <a>HOME</a>
-                    <a>PROFILE</a>
-                    <a>CONTACT</a>
+                    <a class="url_to_page" href="../index.html">HOME</a>
+                    <a class="url_to_page" href="#">PROFILE</a>
+                    <a class="url_to_page" href="#contactsurutokoro">CONTACT</a>
                     <a><i class="fa-solid fa-bars"></i></a>
                 </span>
             </div>
@@ -47,7 +46,7 @@
                 <p>2024年10月29日：自サイト「だらだら工房」公開</p>
                 <p>それ以外の実績はまだありません。</p>
             </div>
-            <div class="contact_address">
+            <div class="contact_address" id="contactsurutokoro">
                 <h1 class="major_heading">CONTACT</h1>
                 <p>Gmail: masaodawayon@gmail.com</p>
                 <p>お問い合わせフォームはこちらです。</p>
@@ -64,38 +63,36 @@
             </div>
         </div>
         <div class="bottom_bar">
-            <div class="bottom_bar_contents">
-                <span class="blog_logo">
-                    <i class="fa-solid fa-wrench"></i>だらだらこうぼう
-                </span>
-                <div class="bar">
-                    <div class="bar_2">
-                        <div class="bar_title">SITEMAP</div>
-                        <ul>
-                            <li><a>ホームページ</a></li>
-                            <li><a>プロフィール</a></li>
-                            <li><a>お問い合わせ</a></li>
-                            <li><a href="#page_top">ポートフォリオ</a></li>
-                        </ul>
-                    </div>
-                    <div class="bar_3">
-                        <div class="bar_title">CATEGORY</div>
-                        <ul>
-                            <li><a>HTML</a></li>
-                            <li><a>JAVASCRIPT</a></li>
-                            <li><a>CSS</a></li>
-                        </ul>
-                    </div>
-                    <div class="bar_4">
-                        <div class="bar_title">SNS</div>
-                        <ul>
-                            <li><a>X</a></li>
-                            <li><a>HATENA BLOG</a></li>
-                        </ul>
-                    </div><br>
+            <div class="blog_logo">
+                <a><i class="fa-solid fa-wrench"></i>だらだらこうぼう</a>
+            </div>
+            <div class="listtati">
+                <div class="bar_1">
+                    <p class="bar_title">SITEMAP</p>
+                    <ul class="list">
+                        <li><a href="../index.html">ホームページ</a></li>
+                        <li><a href="../privacy_policy/index.html">プライバシーポリシー</a></li>
+                        <li><a href="#">ポートフォリオ</a></li>
+                        <li><a href="#contactsurutokoro">お問い合わせ</a></li>
+                    </ul>
+                </div>
+                <div class="bar_2">
+                    <p class="bar_title">CATEGORY</p>
+                    <ul class="list">
+                        <li><a>ゲーム制作</a></li>
+                        <li><a>ウェブ関係</a></li>
+                        <li><a>雑記</a></li>
+                    </ul>
+                </div>
+                <div class="bar_3">
+                    <p class="bar_title">SNS</p>
+                    <ul class="list">
+                        <li><a href="https://x.com/anvishasuhasimt">X</a></li>
+                        <li><a href="https://ojisanndaradara.hatenablog.jp/">はてなブログ</a></li>
+                    </ul>
                 </div>
             </div>
-            <p class="copy_right">© 2024 だらだらこうぼう</p>
+            <p class="copyright">@2024 だらだらこうぼう</p>
         </div>
     </body>
 </html>
