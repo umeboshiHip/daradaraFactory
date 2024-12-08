@@ -6,6 +6,65 @@ body {
     margin: 0px;
 }
 
+#hamburger_bar {
+    position: fixed;
+    top: 0;
+    display: none;
+
+    background-color: #494949;
+    color: white;
+    width: 100%;
+    height: 100%;
+
+    padding-top: 3em;
+}
+
+.open_bar {
+    animation-name: show_hamburger_bar;
+    animation-duration: 1s;
+}
+
+.close_bar {
+    animation-name: close_hamburger_bar;
+    animation-duration: 1s;
+}
+
+@keyframes show_hamburger_bar {
+    0% {
+        left: 100%;
+    }
+    100% {
+        left: 0;
+    }
+}
+
+@keyframes close_hamburger_bar {
+    0% {
+        left: 0;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+.h_list li {
+    list-style: none;
+    padding-bottom: 2em;
+    text-align: center;
+}
+
+.h_list li a {
+    font-family: "Zen Maru Gothic", serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 30;
+}
+
+#hamburger_bar h1 {
+    text-align: right;
+    padding-right: 5%;
+}
+
 .main_text > .major_heading, .self_introduce > .major_heading, .contact_address > .major_heading, .accomplishment > .major_heading {
     font-family:'游ゴシック';
     font-size: 300%;
@@ -16,10 +75,6 @@ body {
     white-space: normal;
     word-wrap: break-word;
 
-}
-
-.top_bar {
-    padding-bottom: 2em;
 }
 
 .self_introduce, .accomplishment, .contact_address {
@@ -264,4 +319,25 @@ body {
     color: white;
     background-color: #494949;
     border-radius: 3px;
+}
+
+.link_to_move_page {
+    margin-top: 4em;
+    margin-bottom: 2em;
+}
+
+.link_to_move_page a {
+    background-color: #494949;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    font-size: 100%;
+    font-family: "Zen Maru Gothic", serif;
+    font-weight: 400;
+    font-style: normal;
+    border-radius: 7px;
+}
+
+.to_nextpage {
+    float: right;
 }

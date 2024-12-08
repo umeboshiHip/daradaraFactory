@@ -1,0 +1,40 @@
+■ハンバーガーリストの作り方
+まずリストのcssの設定
+positionは画面の特定の場所に固定するためfixed
+最初は見えないようにdisplayはnone
+
+#hamburger_bar {
+    position: fixed;
+    top: 0;
+    display: none;
+
+    background-color: #494949;
+    color: white;
+    width: 100%;
+    height: 100%;
+
+    padding-top: 3em;
+}
+こんな感じ
+そしたらcss側でボタンを押されたときに付与するクラスを作って開いた時と閉じたときのアニメーション（keyframe）を作る
+
+.open_bar {
+    animation-name: show_hamburger_bar;
+    animation-duration: 1s;
+}
+@keyframes show_hamburger_bar {
+    0% {
+        left: 100%;
+    }
+    100% {
+        left: 0;
+    }
+}
+
+こんな感じ
+これを書いたらjavascriptで
+・バーを開くボタンを押したときにopenbarを付与＆closebarを削除
+・closebarのアニメーションが終わったらdisplayをnoneに
+を書く
+
+./js/handleBar.jsの中身がそれ
